@@ -40,7 +40,7 @@
       ".*\\.py"
     ]
   },
-  "platformAutomerge": false,
+  "platformAutomerge": true,
   "pre-commit": {
     "enabled": true
   },
