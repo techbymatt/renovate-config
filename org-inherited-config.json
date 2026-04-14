@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "assignees": [
+    "MattKobayashi"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^Dockerfile$/"
+      ],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) (depName=(?<depName>.*?)|packageName=(?<packageName>.*?))( versioning=(?<versioning>.*?))?\\sARG .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ],
+  "extends": [
+    ":automergeDigest",
+    ":automergeMinor",
+    "config:best-practices",
+    "mergeConfidence:all-badges",
+    "security:openssf-scorecard",
+    "security:minimumReleaseAgeNpm"
+  ],
+  "internalChecksAsSuccess": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "/^python$/"
+      ],
+      "groupName": "python"
+    }
+  ],
+  "pep723": {
+    "managerFilePatterns": [
+      ".*\\.py"
+    ]
+  },
+  "platformAutomerge": false,
+  "pre-commit": {
+    "enabled": true
+  },
+  "prHourlyLimit": 0,
+  "timezone": "Australia/Brisbane"
+}
