@@ -20,8 +20,7 @@
     ":automergeMinor",
     "config:best-practices",
     "mergeConfidence:all-badges",
-    "security:openssf-scorecard",
-    "security:minimumReleaseAgeNpm"
+    "security:openssf-scorecard"
   ],
   "internalChecksAsSuccess": true,
   "lockFileMaintenance": {
