@@ -45,5 +45,13 @@
     "enabled": true
   },
   "prHourlyLimit": 0,
-  "timezone": "Australia/Brisbane"
+  "timezone": "Australia/Brisbane",
+  "vulnerabilityAlerts": {
+    "automerge": true,
+    "labels": [
+      "security"
+    ],
+    "semanticCommitType": "fix",
+    "semanticCommitScope": "deps"
+  }
 }
